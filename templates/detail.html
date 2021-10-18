@@ -1,0 +1,130 @@
+{% extends "base.html"  %}
+{% load static%}
+{% block   title%}
+{{developer_name}}
+{%  endblock %}
+{%block content%}
+<div class="container">
+  <p class="text-center fs-1 m-2">{{developer_name}}</p>
+  <div class="row">
+    <div class="col">
+      <div class="alert alert-info" role="alert">
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li>
+                {{ message }}
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+    <div class="row">
+      <div class="col">
+        <label  class="form-label fs-3">Hafta 1</label>  
+        {% for i in h1%}
+        <div class="card m-1" style="width: 18rem;">
+            <div class="card-header">
+                {{i.name}}
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"> Zorluk :{{i.zorluk}}</li>
+              <li class="list-group-item"> Süre :{{i.sure}}</li>
+            </ul>
+        </div>
+        {% empty %}
+        {% include "empty.html" %}
+        {%endfor%}
+      </div>
+      <div class="col">
+        <label  class="form-label fs-3">Hafta 2</label>  
+        {% for i in h2%}
+        <div class="card m-1" style="width: 18rem;">
+            <div class="card-header">
+                {{i.name}}
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"> Zorluk :{{i.zorluk}}</li>
+              <li class="list-group-item"> Süre :{{i.sure}}</li>
+            </ul>
+        </div>
+        {% empty %}
+        {% include "empty.html" %}
+        {%endfor%}
+      </div>
+      <div class="col">
+        <label  class="form-label fs-3">Hafta 3</label>  
+        {% for i in h3%}
+        <div class="card m-1" style="width: 18rem;">
+            <div class="card-header">
+                {{i.name}}
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"> Zorluk :{{i.zorluk}}</li>
+              <li class="list-group-item"> Süre :{{i.sure}}</li>
+            </ul>
+        </div>
+        {% empty %}
+        {% include "empty.html" %}
+        {%endfor%}
+      </div>
+        <div class="col">
+          <label  class="form-label fs-3">Hafta 4</label>  
+          {% for i in h4%}
+          <div class="card m-1" style="width: 18rem;">
+              <div class="card-header">
+                  {{i.name}}
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"> Zorluk :{{i.zorluk}}</li>
+                <li class="list-group-item"> Süre :{{i.sure}}</li>
+              </ul>
+          </div>
+          {% empty %}
+          {% include "empty.html" %}
+          {%endfor%}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+            <label  class="form-label fs-3">Hafta 5</label>  
+            {% for i in h5%}
+            <div class="card m-1" style="width: 18rem;">
+                <div class="card-header">
+                    {{i.name}}
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"> Zorluk :{{i.zorluk}}</li>
+                  <li class="list-group-item"> Süre :{{i.sure}}</li>
+                </ul>
+            </div>
+            {% empty %}
+            {% include "empty.html" %}
+          {%endfor%}
+          </div>
+        <div class="col-3">
+            <label  class="form-label fs-3">Hafta 6</label>  
+            {% for i in h6%}
+            <div class="card m-1" style="width: 18rem;">
+                <div class="card-header">
+                    {{i.name}}
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"> Zorluk :{{i.zorluk}}</li>
+                  <li class="list-group-item"> Süre :{{i.sure}}</li>
+                </ul>
+            </div>
+            {% empty %}
+            {% include "empty.html" %}
+            {%endfor%}
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+{%  endblock %}

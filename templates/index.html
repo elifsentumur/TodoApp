@@ -1,0 +1,31 @@
+{% extends "base.html"  %}
+{% load static%}
+{% block   title%}
+Anasayfa
+{%  endblock %}
+{%block content%}   
+<div class="container">
+  <div class="row">
+    <div class="col">
+      </div>
+      <form action="" method="POST">
+        {%csrf_token%}   
+          <label class="form-label m-2" >Provider Seçiniz!</label>
+          <select class="form-select m-2" aria-label="Default select example" id='p_name' name='p_name'>
+            <option selected>Developer Seçiniz</option> Seçiniz</option>
+            <option value="Developer 1">Developer 1</option>
+            <option value="Developer 2">Developer 2</option>
+            <option value="Developer 3">Developer 3</option>
+            <option value="Developer 4">Developer 4</option>
+            <option value="Developer 5">Developer 5</option>
+          </select>
+          <div class="d-grid gap-2">
+            <input class="btn btn-primary m-2"type="submit">>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+    
+
+    {%  endblock %}
